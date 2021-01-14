@@ -1,0 +1,26 @@
+ <?php use Wezeo\Websitescraper\Controllers\Classes\DownloadUtils; use Illuminate\Support\Facades\Session; ?>
+<form method="post" enctype="multipart/form-data" >
+    <!-- calling function onSbumit -->
+    <input type="hidden" name="_handler" value="onSubmit">
+    <?= Form::token() ?>
+    <?= Form::sessionKey() ?>
+
+    <h2>Enter link on page which U want download: </h2>
+    <textarea name="link" id="" cols="310" rows="30" placeholder="Pages separate with Enter"><?php echo Session::get("links") ?></textarea>
+    <?php Session::forget("links"); ?>
+    <label for="">Replace index page</label>
+    <input type="checkbox" name="checkbox"/>
+
+    <input type="submit" value="Scrape pages" style="background-color: Orange;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      width: 100%;
+    ">
+</form>

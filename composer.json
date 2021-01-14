@@ -1,0 +1,15 @@
+{
+    "name": "wezeo/websitescraper",
+    "description": "Scrape web pages",
+    "type": "october-plugin",
+    "authors": [
+        {
+            "name": "Peter Knaus",
+            "email": "pknaus3@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "simple-html-dom/simple-html-dom": "^1.5.0"
+    }
+}
